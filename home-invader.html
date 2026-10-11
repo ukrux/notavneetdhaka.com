@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Invader Designer Diary | Avneet Dhaka</title>
+<meta name="description" content="Designer diary for Home Invader: noise meter, perfection meter, hidden rooms and the mansion&#x27;s level design.">
+<meta property="og:title" content="Home Invader Designer Diary | Avneet Dhaka">
+<meta property="og:description" content="Designer diary for Home Invader: noise meter, perfection meter, hidden rooms and the mansion&#x27;s level design.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.notavneetdhaka.com/images/avneet.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="pePcKmlKnHEFmmFaa659IvQ0HLYUi846LxJ08p3yav8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo-white.png" alt=""><span>Avneet Dhaka</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav"><a href="index.html">Home</a><a href="highlights.html">Highlights</a><a href="projects.html">Projects</a><a href="designer-diary.html" aria-current="page">Designer Diary</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="page-head"><div class="wrap">
+  <p class="label amber"><a href="designer-diary.html" style="text-decoration:none">← Designer Diary</a></p>
+  <h1>Home Invader</h1>
+  <div class="prose intro"><p>Home Invader is a first-person stealth-horror experience where silence becomes your only weapon.</p><p>You break into a wealthy man’s isolated villa at night, but something about the place feels wrong the moment you step inside. Every floorboard creak, every drawer you open, every breath you take feeds into a noise system that reacts to your mistakes. The house listens, the darkness watches, and your only goal is simple: get in, steal what you need, and get out alive.</p><p>Built as an experiment in tension-based gameplay, Home Invader replaces traditional enemies with fear of the unknown. The environment itself becomes your threat — creaking wood, flickering lights, distant knocks, and unsettling ambience that makes you question if you’re alone.</p><p>It’s a slow-burn, anxiety-heavy game where the fear comes from what you hear, not what you see.</p></div>
+  <div class="btns"><a class="btn primary" href="https://store.steampowered.com/app/4437710/Home_Invader/" target="_blank" rel="noopener">Play Game <span class="arr">→</span></a></div>
+</div></div>
+<section><div class="wrap" style="display:grid;gap:18px"><p class="label amber">Trailer</p><div style="max-width:960px"><div class="yt"><iframe src="https://www.youtube.com/embed/MmahKEm4LpM" title="Home Invader trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div></div></section>
+<section><div class="wrap two-col">
+  <div style="display:grid;gap:14px;align-content:start"><p class="label amber">My roles</p><div class="chips"><span class="chip">Game Designer</span><span class="chip">Creative Director</span><span class="chip">Level Designer</span><span class="chip">UI/UX</span><span class="chip">Sound Design &amp; Music</span><span class="chip">Narrative</span><span class="chip">Gameplay Systems</span></div></div>
+  <div style="display:grid;gap:14px;min-width:0"><p class="label amber">Responsibilities</p><ul class="ticks"><li>Designed core stealth loop and noise meter system</li><li>Built levels using modular blockouts</li><li>Created UI layouts and iconography</li><li>Composed ambient soundscapes and SFX</li><li>Wrote narrative beats and environmental storytelling</li><li>Implemented enemy logic and triggers</li></ul></div>
+</div></section>
+<section><div class="wrap">
+  <div class="sec-head"><p class="label">Screenshots</p></div>
+  <div class="gallery wide">
+<div class="shot"><img src="images/games/home-invader/shot-01.jpg" alt="Home Invader screenshot 1" loading="lazy"></div>
+<div class="shot"><img src="images/games/home-invader/shot-02.jpg" alt="Home Invader screenshot 2" loading="lazy"></div>
+<div class="shot"><img src="images/games/home-invader/shot-03.jpg" alt="Home Invader screenshot 3" loading="lazy"></div>
+<div class="shot"><img src="images/games/home-invader/shot-04.jpg" alt="Home Invader screenshot 4" loading="lazy"></div>
+<div class="shot"><img src="images/games/home-invader/shot-05.jpg" alt="Home Invader screenshot 5" loading="lazy"></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><p class="label amber">My design breakdown</p><h2>How it works</h2></div>
+  <div class="toc">
+    <div><p class="label">Core gameplay systems</p><ul class="ticks"><li>Noise Meter</li><li>Perfection Meter</li><li>Object Rotation / Hidden Walls / Hidden Room</li><li>Javed's Mansion</li></ul></div>
+    <div><p class="label">Additional work</p><ul class="ticks"><li>Story and Timeline</li><li>In-Game Documents</li><li>Hanging Bodies / KanBan Death Board</li><li>Computer UI and ChatUs</li><li>Game UI / UX</li><li>In-Game Cinematics</li><li>In-Game Sounds and OST</li></ul></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="block">
+    <div><p class="num">01</p><h3>Noise Meter</h3></div>
+    <div class="prose">
+      <p>Noise Meter is the face of Home Invader. The player invades the house of Javed Garohar, but the catch is that every sound you make adds to the noise meter.</p>
+      <p>It works on a simple logic. Each object has a set +dB amount — for example, Door Open / Close = +5 dB. The meter goes up as these values add together. To bring it down, it works like a gauge: when the player stays idle, it drops by 1 at a time. This raises the stakes of every move.</p>
+      <p>The meter shows as a Noise Bar in the HUD. Its color shows how full it is, and the Narrator gives warnings to keep quiet as it fills. When the bar reaches 100, the house sets off an alarm, wakes the security guard, and the player is caught.</p>
+    </div>
+    <div class="zones">
+      <div class="zone g"><b>Green</b><span>Safe zone</span></div>
+      <div class="zone y"><b>Yellow</b><span>Warning</span></div>
+      <div class="zone r"><b>Red</b><span>Danger · 100 = alarm</span></div>
+    </div>
+    <figure><div class="shot"><img src="images/games/home-invader/9d9dc20092ea.jpg" alt="Noise meter during a puzzle" loading="lazy"></div><figcaption>The noise meter in use during a puzzle.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">02</p><h3>Perfection Meter</h3></div>
+    <div class="prose">
+      <p>The Perfection Meter is an interaction system used to unlock doors, designed to introduce controlled tension through timing and precision. It operates as a left-to-right moving bar divided into three zones — Red, Yellow, and Green — and the player must stop the indicator inside the Green zone to unlock the door cleanly.</p>
+      <p>This system turns a simple interaction into a skill-based challenge, and ties player precision directly to the core stealth loop.</p>
+    </div>
+    <div class="zones">
+      <div class="zone g"><b>Green</b><span>Clean unlock, minimal noise</span></div>
+      <div class="zone y"><b>Yellow</b><span>Imperfect, moderate to high noise</span></div>
+      <div class="zone r"><b>Red</b><span>Triggers the alarm</span></div>
+    </div>
+    <figure><div class="shot"><img src="images/games/home-invader/c3fd127ba452.jpg" alt="Perfection meter unlocking a door" loading="lazy"></div><figcaption>The perfection meter used to unlock a door.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">03</p><h3>Object Rotation / Hidden Walls / Hidden Door</h3></div>
+    <div class="prose">
+      <p>The layout of the mansion was designed to encourage exploration and layered discovery, using interactive objects as keys to hidden spaces. The challenge was not just placing important areas, but making them feel naturally hidden in the environment.</p>
+      <p>To solve this, I added hidden walls triggered by object interaction, turning environmental details into gameplay. Players must observe, interpret, and move objects to reveal secret areas.</p>
+    </div>
+    <h4>Three main hidden rooms</h4>
+    <dl class="qa">
+      <dt>Security Room</dt><dd>Unlocked by rotating a two-piece emerald statue into a symmetrical alignment, which triggers a hidden wall.</dd>
+      <dt>Antique Room</dt><dd>Accessed by rotating an abstract painting. The artwork forms an inverted face, and aligning it correctly reveals the hidden passage.</dd>
+      <dt>Torture Room</dt><dd>A multi-step unlock. Players first activate a hidden library mechanism using a specific book, which reveals a second door. The final step is finding a key to unlock the inner chamber.</dd>
+    </dl>
+    <figure><div class="shot"><img src="images/games/home-invader/f62b9a4854bc.jpg" alt="Mansion map layout" loading="lazy"></div><figcaption>The full mansion blueprint, designed by Avneet Dhaka.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">04</p><h3>Javed's Mansion</h3><p class="label" style="margin-top:8px">Level design &amp; spatial experience</p></div>
+    <div class="prose">
+      <p>Javed’s Mansion is built around a 3BHK home layout, expanded with hidden and restricted spaces to support both progression and story. It is meant to feel grounded and believable, while quietly guiding how the player moves.</p>
+    </div>
+    <div class="toc">
+      <div><p class="label">Main layout</p><ul class="ticks"><li>Main Bedroom – personal space tied to Javed and Minakshi</li><li>Infant Room – emotionally driven storytelling space</li><li>Guest Room – transitional exploration area</li></ul></div>
+      <div><p class="label">Special zones</p><ul class="ticks"><li>Security Room – system control and high-risk area</li><li>Artifact Room – puzzle-driven interaction space</li><li>Torture Room – narrative payoff and high-intensity discovery</li></ul></div>
+    </div>
+    <div class="prose"><p>A restricted second floor acts as a narrative anchor. Because players can't enter it, it builds curiosity and tension as a forbidden space.</p></div>
+    <h4>Gameplay impact</h4>
+    <ul class="ticks"><li>Tight corridors and door placements force players to make deliberate movement decisions</li><li>Room clustering raises the risk of noise building up, so moving around becomes a strategic choice</li><li>Hidden spaces reward observation and break up linear exploration, so players slow down</li><li>Layered access (locks, hidden walls, multi-step entry) controls pacing and stops players reaching key areas too early</li></ul>
+    <h4>Design intent</h4>
+    <ul class="ticks"><li>Ground the experience in a realistic, relatable layout</li><li>Use space to create tension without direct threats</li><li>Encourage slow, intentional exploration</li><li>Put the story inside the environment instead of long explanations</li></ul>
+    <h4>Role &amp; contribution</h4>
+    <div class="prose"><p>I made the complete environment, including layout design, 3D modeling, and texturing. The whole gameplay experience is built around this space.</p></div>
+    <figure><div class="shot"><img src="images/games/home-invader/c27b146aeb2f.jpg" alt="3D model of the mansion" loading="lazy"></div><figcaption>The full 3D model of the mansion, designed by Avneet Dhaka.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">05</p><h3>Story, UI &amp; Presentation</h3></div>
+    <div class="prose">
+      <p>The story of Home Invader is told through environmental storytelling, interactive systems, and audiovisual design, so the player uncovers it on their own instead of being told. The story and timeline come out bit by bit through in-game documents, and players piece the events together themselves.</p>
+      <p>The Computer UI and ChatUs work as controlled windows into the story, giving context while keeping the player engaged. Visual elements like the Hanging Bodies and the KanBan Death Board give quick, wordless hints at the darker themes and past events.</p>
+      <p>The UI/UX balances clarity with immersion, so players get what they need without breaking the tension. I made the intro cinematics in Blender, and the sound design and original OST in FL Studio. Together they build psychological pressure and guide the player's emotions.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="display:grid;gap:18px">
+  <p class="label amber">Music I made for Home Invader</p>
+  <div class="sc"><iframe title="Home Invader soundtrack" height="450" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2148836369%3Fsecret_token%3Ds-GpPShs9nZJg&color=%23e8314f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe></div><div class="btns"><a class="btn" href="https://soundcloud.com/avneet-dhaka/sets/home-invader/s-GpPShs9nZJg" target="_blank" rel="noopener">Open on SoundCloud <span class="arr">→</span></a></div>
+</div></section>
+<section><div class="wrap next-link">
+  <span class="label">Next diary</span>
+  <a class="btn primary" href="other-half.html">Other Half <span class="arr">→</span></a>
+</div></section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div style="display:grid;gap:10px">
+      <div class="name">Avneet Dhaka</div>
+      <div class="label">Game Designer</div>
+    </div>
+    <div class="socials">
+      <a class="s-instagram" href="https://www.instagram.com/notavneet" target="_blank" rel="noopener">Instagram</a>
+      <a class="s-linkedin" href="https://www.linkedin.com/in/avneetdhaka/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="s-itch" href="https://notavneetdhaka.itch.io/" target="_blank" rel="noopener">itch.io</a>
+      <a class="s-youtube" href="https://www.youtube.com/@not.avneet" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
