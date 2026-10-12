@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Disum Designer Diary | Avneet Dhaka</title>
+<meta name="description" content="Designer diary for Disum, a mobile dice puzzle game: rolling-die mechanic, puzzle nodes, the spike soft-lock fix, pacing and swipe controls.">
+<meta property="og:title" content="Disum Designer Diary | Avneet Dhaka">
+<meta property="og:description" content="Designer diary for Disum, a mobile dice puzzle game: rolling-die mechanic, puzzle nodes, the spike soft-lock fix, pacing and swipe controls.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.notavneetdhaka.com/images/avneet.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="pePcKmlKnHEFmmFaa659IvQ0HLYUi846LxJ08p3yav8">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="themed" style="--accent: #f0457a; --accent-ink: #fff">
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo-white.png" alt=""><span>Avneet Dhaka</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="projects.html">Projects</a><a href="designer-diary.html" aria-current="page">Designer Diary</a><a href="index.html#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="page-head"><div class="wrap">
+  <p class="label amber"><a href="designer-diary.html" style="text-decoration:none">← Designer Diary</a></p>
+  <h1>Disum</h1>
+  <div class="prose intro"><p>Disum is a dark, atmospheric isometric puzzle game for mobile. You roll a 3D die across mysterious environments and match the right face to glowing nodes to unlock the path forward.</p><p>It starts as a simple spatial puzzle and grows as new mechanics, hazards and environmental challenges appear. Built around the lore of the Disum Curse, it pairs an eerie, premium look with easy controls and puzzles that make you think several moves ahead.</p><p class="label" style="margin-top:4px">Android · Damn Boi Studios · In development</p></div>
+  <div class="btns"><a class="btn primary" href="https://damnboistudios.itch.io/disum" target="_blank" rel="noopener">Play Game <span class="arr">→</span></a></div>
+</div></div>
+<section><div class="wrap" style="display:grid;gap:18px"><p class="label amber">Trailer</p><div style="max-width:960px"><div class="yt"><iframe src="https://www.youtube.com/embed/26xqyVgwzT4" title="Disum trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div></div></section>
+<section><div class="wrap two-col">
+  <div style="display:grid;gap:14px;align-content:start"><p class="label amber">My roles</p><div class="chips"><span class="chip">Game Designer</span><span class="chip">UI/UX</span><span class="chip">Technical Artist (VFX &amp; Shaders)</span><span class="chip">Brand Designer</span><span class="chip">Music &amp; SFX</span><span class="chip">Game Art</span></div></div>
+  <div style="display:grid;gap:14px;min-width:0"><p class="label amber">Responsibilities</p><ul class="ticks"><li>Designed the core dice-rolling mechanic and the number-match goal</li><li>Designed the puzzle nodes: pressure plates, pattern match, spikes and directional arrows</li><li>Fixed a soft-lock in the spike system by redesigning how spikes move</li><li>Planned mechanic pacing across Chapter 1's 12 levels</li><li>Chose swipe controls after testing them against on-screen buttons</li><li>Made all VFX: portal, spawn and level complete, with Shader Graph and particle systems</li><li>Composed the music and sound effects, and designed the brand</li></ul></div>
+</div></section>
+<section><div class="wrap">
+  <div class="sec-head"><p class="label">Screenshots</p></div>
+  <div class="gallery wide">
+<div class="shot"><img src="images/games/disum/shot-01.jpg" alt="Disum screenshot 1" loading="lazy"></div>
+<div class="shot"><img src="images/games/disum/shot-02.jpg" alt="Disum screenshot 2" loading="lazy"></div>
+<div class="shot"><img src="images/games/disum/shot-03.jpg" alt="Disum screenshot 3" loading="lazy"></div>
+<div class="shot"><img src="images/games/disum/shot-04.jpg" alt="Disum screenshot 4" loading="lazy"></div>
+<div class="shot"><img src="images/games/disum/shot-05.jpg" alt="Disum screenshot 5" loading="lazy"></div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+  <div class="sec-head"><p class="label amber">My design breakdown</p><h2>How it works</h2></div>
+
+  <div class="block">
+    <div><p class="num">01</p><h3>Rolling the Die</h3><p class="label" style="margin-top:8px">Core mechanic</p></div>
+    <div class="prose">
+      <p>The die moves one tile at a time. Every step tips it over, so the face on top changes with each move. Number tiles only open when the face on top matches the number on the tile.</p>
+      <p>This turns simple movement into the puzzle itself. The player isn't just finding a path to the goal. They're finding a path that makes the <strong>right face land in the right place</strong>. Every move changes what the die will show next, so players learn to plan a few rolls ahead instead of just walking forward.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div><p class="num">02</p><h3>Puzzle Nodes</h3><p class="label" style="margin-top:8px">The steps before the final match</p></div>
+    <div class="prose">
+      <p>Each level is built from smaller puzzles. The player clears these first, and only then reaches the core puzzle: the final <strong>Number Match</strong>. This keeps each level varied while always ending on the main idea of the game.</p>
+    </div>
+    <div class="toc">
+      <div><p class="label amber">Pressure Plate</p><p>Plates open doors, but the die alone isn't enough to hold one down.</p></div>
+      <div><p class="label amber">Pattern Match</p><p>Light up tiles with the die to copy a pattern shown next to the platform.</p></div>
+      <div><p class="label amber">Spikes</p><p>Spikes rise and fall in a rhythm the player has to read and time.</p></div>
+      <div><p class="label amber">Directional Arrows</p><p>Stepping on an arrow tile turns its arrow by 45°, and the arrow changes color when it points the right way. Line up every arrow to reveal the number on the number tile.</p></div>
+    </div>
+    <figure><div class="shot"><img src="images/games/disum/design-pattern-match.jpg" alt="Pattern Match design sheet" loading="lazy"></div><figcaption>Pattern Match concept: light up the tiles to copy the given pattern and unlock the way.</figcaption></figure>
+    <figure><div class="shot"><img src="images/games/disum/design-pressure-plate.jpg" alt="Pressure Plate design sheet" loading="lazy"></div><figcaption>Pressure Plate concept: three ways to hold a plate down, with a duplicate die, a movable block, or both.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">03</p><h3>Fixing the Spike Soft-Lock</h3><p class="label" style="margin-top:8px">A problem I solved</p></div>
+    <dl class="qa">
+      <dt>The problem</dt>
+      <dd>In the first version, spikes switched up and down on every single move, based on one on/off signal. If the player started next to a raised spike, the timing always lined up so the die landed on it. There was no way through. The level was soft-locked.</dd>
+      <dt>The fix</dt>
+      <dd>I rebuilt spike movement around an offset pattern. Instead of flipping every move, each spike follows a short cycle, like up-up-down or down-down-up. Now there's always a safe window, and players can count their moves to slip past.</dd>
+      <dt>The bonus</dt>
+      <dd>We made the pattern customisable for each spike. Different spikes can run different rhythms, so a single row of spikes can become its own small timing puzzle.</dd>
+    </dl>
+    <div class="spikes">
+      <p class="label">Spike patterns · 1 = up, 0 = down</p>
+      <div class="spike-row"><code>1-0</code><div class="sp-cells"><span class="sp up" title="Spike up">▲</span><span class="sp down" title="Spike down"></span><span class="sp loop">↻</span></div><span class="sp-name">Before: flips every move (soft-lock)</span></div>
+      <div class="spike-row"><code>1-1-0</code><div class="sp-cells"><span class="sp up" title="Spike up">▲</span><span class="sp up" title="Spike up">▲</span><span class="sp down" title="Spike down"></span><span class="sp loop">↻</span></div><span class="sp-name">Up, up, down</span></div>
+      <div class="spike-row"><code>0-0-1</code><div class="sp-cells"><span class="sp down" title="Spike down"></span><span class="sp down" title="Spike down"></span><span class="sp up" title="Spike up">▲</span><span class="sp loop">↻</span></div><span class="sp-name">Down, down, up</span></div>
+      <div class="spike-row"><code>1-1-1-0</code><div class="sp-cells"><span class="sp up" title="Spike up">▲</span><span class="sp up" title="Spike up">▲</span><span class="sp up" title="Spike up">▲</span><span class="sp down" title="Spike down"></span><span class="sp loop">↻</span></div><span class="sp-name">Up, up, up, down</span></div>
+      <div class="spike-row"><code>0-0-0-1</code><div class="sp-cells"><span class="sp down" title="Spike down"></span><span class="sp down" title="Spike down"></span><span class="sp down" title="Spike down"></span><span class="sp up" title="Spike up">▲</span><span class="sp loop">↻</span></div><span class="sp-name">Down, down, down, up</span></div>
+    </div>
+    <figure><div class="shot"><img src="images/games/disum/design-spikes.jpg" alt="Spikes Ground design sheet" loading="lazy"></div><figcaption>Spikes Ground concept: spikes on different timings that the player has to read and dodge.</figcaption></figure>
+  </div>
+
+  <div class="block">
+    <div><p class="num">04</p><h3>Verticality</h3><p class="label" style="margin-top:8px">Later in the game</p></div>
+    <div class="prose">
+      <p>Later levels add height. To reach higher platforms, the player has to use a <strong>duplicate cube</strong> as a step to climb. This takes the same rolling rules into a new direction: now the player plans upward as well as across the board.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div><p class="num">05</p><h3>Difficulty &amp; Pacing</h3><p class="label" style="margin-top:8px">Chapter 1 · 12 levels</p></div>
+    <div class="prose">
+      <p>In the current build, Chapter 1 has 12 levels, and a new mechanic arrives at levels 3, 6, 8 and 10. The levels in between let players practise each new idea before the next one lands.</p>
+    </div>
+    <div class="levels" aria-label="Chapter 1 levels, with new mechanics at levels 3, 6, 8 and 10"><div class="lv"><b>01</b></div><div class="lv"><b>02</b></div><div class="lv new"><b>03</b><span>New</span></div><div class="lv"><b>04</b></div><div class="lv"><b>05</b></div><div class="lv new"><b>06</b><span>New</span></div><div class="lv"><b>07</b></div><div class="lv new"><b>08</b><span>New</span></div><div class="lv"><b>09</b></div><div class="lv new"><b>10</b><span>New</span></div><div class="lv"><b>11</b></div><div class="lv"><b>12</b></div></div>
+    <div class="prose">
+      <p><strong>What's next:</strong> in the final build, there will be more levels between each new mechanic, so players get more time to master one idea before learning the next. More chapters are planned too, and two of the mechanics will move into those later chapters.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div><p class="num">06</p><h3>Swipe Controls</h3><p class="label" style="margin-top:8px">Designing for mobile</p></div>
+    <div class="prose">
+      <p>We built and tested two versions: on-screen buttons and swipes. Swipes felt smoother and gave players more freedom. The buttons were hard to hit and quickly got annoying.</p>
+      <p>There was a technical reason too. Buttons would need constant adjusting for different screen sizes, while swipes work the same on any phone. For a game where every single move matters, the control should feel invisible, so we went with swipes.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div><p class="num">07</p><h3>Technical Art</h3><p class="label" style="margin-top:8px">VFX &amp; shaders</p></div>
+    <div class="prose">
+      <p>I made all of the game's VFX, including the <strong>portal</strong>, the <strong>spawn effect</strong> and the <strong>level complete</strong> effect. I built them with Shader Graph and Unity's particle system, and made the tile patterns in Photoshop.</p>
+      <p>In a dark game like this, light does a lot of work. The glowing tiles and effects tell the player where to look and what matters, without needing extra UI.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div><p class="num">08</p><h3>UI/UX</h3><p class="label" style="margin-top:8px">Prototype stage</p></div>
+    <div class="prose">
+      <p>The UI is still a prototype, kept simple so we could focus on the puzzles first. In final production, it will get a full art pass with a strong art style to match the world of Disum.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="display:grid;gap:18px">
+  <p class="label amber">Music I made for Disum</p>
+  <div class="sc"><iframe title="Disum soundtrack" height="450" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2312880459%3Fsecret_token%3Ds-g8W7VqyOQRt&color=%23f0457a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe></div><div class="btns"><a class="btn" href="https://soundcloud.com/avneet-dhaka/sets/disum/s-g8W7VqyOQRt" target="_blank" rel="noopener">Open on SoundCloud <span class="arr">→</span></a></div>
+</div></section>
+<section><div class="wrap next-link">
+  <span class="label">Next diary</span>
+  <a class="btn primary" href="home-invader.html">Home Invader <span class="arr">→</span></a>
+</div></section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div style="display:grid;gap:10px">
+      <div class="name">Avneet Dhaka</div>
+      <div class="label">Game Designer</div>
+      <a class="foot-mail" href="mailto:notavneetdhaka@gmail.com">notavneetdhaka@gmail.com</a>
+    </div>
+    <div class="socials">
+      <a class="s-instagram" href="https://www.instagram.com/notavneet" target="_blank" rel="noopener">Instagram</a>
+      <a class="s-linkedin" href="https://www.linkedin.com/in/avneetdhaka/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="s-itch" href="https://notavneetdhaka.itch.io/" target="_blank" rel="noopener">itch.io</a>
+      <a class="s-youtube" href="https://www.youtube.com/@not.avneet" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
